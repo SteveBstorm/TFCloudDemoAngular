@@ -1,0 +1,22 @@
+<h1>Pipes</h1>
+
+<h2>Pour les textes</h2>
+<p>le message normal: {{ message }}</p>
+<p>le message en majuscule: {{ message | uppercase }}</p>
+<p>le message en miniscule: {{ message | lowercase }}</p>
+<p>le message avec la première lettre de chaque mot en majuscule: {{ message | titlecase }}</p>
+
+<h2>Pour les chiffres: currency</h2>
+<p>la valeur normale: {{ money }}</p>
+<p>pour limiter le nombre de décimale: {{money | number : '2.2-3'}}</p>
+<p>la valeur format monétaire: {{ money | currency }}</p>
+<p>la valeur format monétaire (en euro): {{ money | currency : "€" }}</p>
+
+<h2>Pour les dates</h2>
+<p>La date d'aujourd'hui normale: {{ today }}</p>
+<p>La date d'aujourd'hui jour/mois/année: {{ today | date : 'dd/MM/yy' }}</p>
+<p>Format de l'heure sur 12h (a pour AM/PM){{ today | date : "hh:mm a"}}</p>
+<p>Format de l'heure sur 24h{{ today | date : "HH:mm"}}</p>
+
+<h2>Custom pipes</h2>
+<p>Via notre pipe personnalisé: {{ money | toFahrenheit }}</p>

@@ -1,4 +1,26 @@
-# Demo
+# Création d'un projet Angular
+
+## prérequis
+
+### NodeJs
+
+Installer [nodeJs LTS](https://nodejs.org/en)
+
+Pour vérifier que nodeJs est installer sur votre machine: **node --version**
+
+### Angular/cli
+
+installer le package @angular/cli via Node Package Manager
+
+**npm install -g @angular/cli**
+
+Vous pouvez vérifier si en angular tourne avec: **ng version**
+
+## Si vous clonez le projet
+
+Regénérez le package via: **npm install**
+
+# Memo Angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.9.
 
