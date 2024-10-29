@@ -1,0 +1,8 @@
+<div>
+    <p>{{time | numberToChrono}}</p>
+    <div>
+        <button (click)="startTimer()" [disabled]="interval">Play</button>
+        <button (click)="stopTimer()" [disabled]="!interval">Stop</button>
+        <button (click)="resetTimer()" [disabled]="time == 0">Reset</button>
+    </div>
+</div>
