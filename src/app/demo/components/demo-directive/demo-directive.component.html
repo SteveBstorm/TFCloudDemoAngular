@@ -64,3 +64,13 @@
 <div>
     <button (click)="saveStockInList()">Save into list</button>
 </div>
+
+<p>Total : {{total}}</p>
+
+<ng-container [ngSwitch]="total">
+    <p *ngSwitchCase="0">Pas de stock</p>
+    <p *ngSwitchCase="1">Stock limité</p>
+    <p *ngSwitchCase="2">Stock presque limité</p>
+    <p *ngSwitchCase="3">Stock limité pour 3</p>
+    <p *ngSwitchDefault>Stock bon pour le moment</p>
+</ng-container>
