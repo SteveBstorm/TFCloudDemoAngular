@@ -1,4 +1,4 @@
-<menu>
+<!-- <menu>
  <li><a routerLink="home">Home</a></li>
  <li><a routerLink="demo">Demo</a></li>
  <li><a routerLink="demo/demo1">Demo1</a></li>
@@ -7,4 +7,20 @@
  <li><a routerLink="exercice">Exercice</a></li>
  <li><a routerLink="exercice/exercice1">Exercice1</a></li>
  <li><a routerLink="exercice/exoChrono">Exercice - Chronomètre</a></li>
+</menu> -->
+
+<menu>
+    <li *ngFor="let link of navigationList">
+        <ng-container *ngIf="link.children; else childLink">
+            <div  dir-showChildren>{{link.title}}</div>
+            <ul [ngClass]="{visible : (link.isVisible != undefined && link.isVisible)}">
+                <li *ngFor="let child of link.children">
+                    <a [routerLink]="link.url+'/'+child.url">{{child.title}}</a>
+                </li>
+            </ul>
+        </ng-container>
+        <ng-template #childLink>
+            <a [routerLink]="link.url">{{link.title}}</a>
+        </ng-template>
+    </li>
 </menu>
