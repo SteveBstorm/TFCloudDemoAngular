@@ -10,6 +10,12 @@ export class ExoChronoComponent {
   public time : number;
   public interval : any | null;
 
+  /* Exemple propriété : mauvaise pratique : Ne pas faire
+  public get playDisabled():boolean{
+    return this.interval;
+  }
+    */
+
   constructor(){
     this.time = 0;
     this.interval = null;

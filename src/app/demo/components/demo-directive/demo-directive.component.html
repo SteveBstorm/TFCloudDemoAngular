@@ -1,0 +1,66 @@
+<h1>Démonstration : Les directives</h1>
+
+<h2>Directives de Composants</h2>
+<p>Le style change selon la quantité du stock.</p>
+<div>
+    <p [ngStyle]="(stock < 5)?warningStockStyle : allrightStockStyle">Le stock actuel est à : {{stock}}</p>
+</div>
+<input type="range" min="0" step="1" max="25" [(ngModel)]="stock">
+
+<div [ngStyle]="{'width' : (stock*5)+'px', 'backgroundColor' : 'black', 'height' : '20px'}" [ngClass]="{'round': stock%5 == 0}"></div>
+
+<div>
+    <button (click)="addStock()">+</button>
+    <button (click)="subStock()" [disabled]="stock <= 0">-</button>
+</div>
+
+
+<h2>Directives structurelles</h2>
+
+<p *ngIf="numberList.length <= 0; else list">Vous n'avez actuellement aucun stock...</p>
+
+<p>En javascript, la boucle for a trois comportements :</p>
+<ol>
+    <li>for( let i = 0 ; i < 10 ; i++ )  : Boucle classique, initialisation d'une variable itérée.</li>
+    <li>for( let item of collection )  : Boucle foreach classique, varaiable récupérant chaque itération la valeur.</li>
+    <li>for( let prop in object )  : Boucle foreach sur un object, varaiable récupérant chaque clé de propriété, pas la valeur.</li>
+</ol>
+
+<ng-template #list>
+    <h3>*ngFor sans indice</h3>
+    <ul>
+        <li *ngFor="let numberStock of numberList;">{{numberStock}}</li>
+    </ul>
+    
+    <h3>*ngFor avec indice</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Indice</th><th>Valeur</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let numberStock of numberList; let i = index">
+                <td>{{i}}</td><td>{{numberStock}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>*ngFor et *ngIf en même temps</h3>
+    <p>Pour illustrer ce cas, nous ne voulons plus les stock à 0...</p>
+    <p>Nous serions tenté de faire 2 directives structurelles, mais c'est impossible.</p>
+    <!-- Non fonctionnel
+    <ul>
+        <li *ngFor="let numberStock of numberList;" *ngIf="numberStock > 0">{{numberStock}}</li>
+    </ul>
+    -->
+    <ul>
+        <ng-container *ngFor="let numberStock of numberList;">
+            <li *ngIf="numberStock > 0">{{numberStock}}</li>
+        </ng-container>
+    </ul>
+</ng-template>
+
+<div>
+    <button (click)="saveStockInList()">Save into list</button>
+</div>
