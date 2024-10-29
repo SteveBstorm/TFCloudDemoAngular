@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { Demo2Component } from './demo2/demo2.component';
 import { FahrenheitPipe } from './fahrenheit.pipe';
 import { DemoDirectiveComponent } from './components/demo-directive/demo-directive.component';
+import { HighlightDirective } from './directives/highlight.directive';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { DemoDirectiveComponent } from './components/demo-directive/demo-directi
     Demo1Component,
     Demo2Component,
     FahrenheitPipe,
-    DemoDirectiveComponent
+    DemoDirectiveComponent,
+    HighlightDirective
   ],
   imports: [
     CommonModule,

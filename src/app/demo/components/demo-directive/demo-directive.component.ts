@@ -33,6 +33,7 @@ export class DemoDirectiveComponent {
     this.stock = 0;
   }
 
+  //! A éviter!!!!!!
   public get total() : number{
     return this.numberList.reduce((a,b)=> a+b, 0);
   }
