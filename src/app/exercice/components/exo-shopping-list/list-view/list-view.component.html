@@ -1,0 +1,16 @@
+<h3>Articles:</h3>
+
+<table>
+    <tr>
+        <th>Nom</th>
+        <th>Prix</th>
+        <th>Options</th>
+    </tr>
+    @for (article of shoppingList; track article.name) {
+    <tr>
+        <td>{{ article.name }}</td>
+        <td>{{ article.price | currency : 'EUR' : 'symbol' : '1.2-2' : 'fr-BE' }}</td>
+        <td><button (click)="removeArticle(article)">🗑️</button></td>
+    </tr>
+    }
+</table>

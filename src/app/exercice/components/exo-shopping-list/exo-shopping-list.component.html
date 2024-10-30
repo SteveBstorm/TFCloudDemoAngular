@@ -1,0 +1,13 @@
+<h2>Exercice: Shopping List</h2>
+
+<label for="name">Nom de l'article: {{articleName}} </label>
+<input type="text" id="name" [(ngModel)]="articleName" (keyup.enter)="nextInput()" #articleNameInput>
+
+<label for="price">Prix de l'article: {{articlePrice}} </label>
+<input type="number" id="price" [(ngModel)]="articlePrice" (keyup.enter)="addArticle()" #articlePriceInput>
+
+<button (click)="addArticle()">Ajouter</button>
+
+<hr>
+
+<app-list-view [shoppingList]="articles" (articleToRemove)="removeArticle($event)" />

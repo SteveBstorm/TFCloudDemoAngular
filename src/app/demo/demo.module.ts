@@ -1,17 +1,19 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 
+import { SharedModule } from '../shared/shared.module';
+import { DemoDirectiveComponent } from './components/demo-directive/demo-directive.component';
+import { ChildInputComponent } from './components/demo-input-output/child-input/child-input.component';
+import { ChildNgcontentComponent } from './components/demo-input-output/child-ngcontent/child-ngcontent.component';
+import { ChildOutputComponent } from './components/demo-input-output/child-output/child-output.component';
+import { DemoInputOutputComponent } from './components/demo-input-output/demo-input-output.component';
+import { DemoServiceComponent } from './components/demo-service/demo-service.component';
 import { DemoRoutingModule } from './demo-routing.module';
 import { Demo1Component } from './demo1/demo1.component';
-import { FormsModule } from '@angular/forms';
 import { Demo2Component } from './demo2/demo2.component';
-import { FahrenheitPipe } from './fahrenheit.pipe';
-import { DemoDirectiveComponent } from './components/demo-directive/demo-directive.component';
 import { HighlightDirective } from './directives/highlight.directive';
-import { DemoInputOutputComponent } from './components/demo-input-output/demo-input-output.component';
-import { ChildInputComponent } from './components/demo-input-output/child-input/child-input.component';
-import { ChildOutputComponent } from './components/demo-input-output/child-output/child-output.component';
-import { ChildNgcontentComponent } from './components/demo-input-output/child-ngcontent/child-ngcontent.component';
+import { FahrenheitPipe } from './fahrenheit.pipe';
+import { ConnectedComponent } from './components/demo-service/connected/connected.component';
 
 
 @NgModule({
@@ -24,12 +26,14 @@ import { ChildNgcontentComponent } from './components/demo-input-output/child-ng
     DemoInputOutputComponent,
     ChildInputComponent,
     ChildOutputComponent,
-    ChildNgcontentComponent
+    ChildNgcontentComponent,
+    DemoServiceComponent,
+    ConnectedComponent,
   ],
   imports: [
     CommonModule,
     DemoRoutingModule,
-    FormsModule
+    SharedModule,
   ]
 })
 export class DemoModule { }

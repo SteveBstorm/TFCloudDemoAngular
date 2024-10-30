@@ -9,10 +9,12 @@
  <li><a routerLink="exercice/exoChrono">Exercice - Chronomètre</a></li>
 </menu> -->
 
+<p>{{ isConnected ? 'Connecté' : 'Déconnecté' }}</p>
+
 <menu>
     <li *ngFor="let link of navigationList">
         <ng-container *ngIf="link.children; else childLink">
-            <div  dir-showChildren>{{link.title}}</div>
+            <div dir-showChildren>{{link.title}}</div>
             <ul [ngClass]="{visible : (link.isVisible != undefined && link.isVisible)}">
                 <li *ngFor="let child of link.children">
                     <a [routerLink]="link.url+'/'+child.url">{{child.title}}</a>

@@ -1,0 +1,15 @@
+<h2>Demo : Services & Injection de dépendances</h2>
+
+
+@if (!isConnected) {
+<label for="username">Nom d'utilisateur:</label>
+<input type="text" id="username" [(ngModel)]="username">
+
+<label for="password">Mot de passe:</label>
+<input type="password" id="password" [(ngModel)]="password">
+
+<button (click)="login()">Se connecter</button>
+}
+@else {
+<button (click)="logout()">Se déconnecter</button>
+}

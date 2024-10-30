@@ -1,8 +1,9 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavbarComponent } from './navbar/navbar.component';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ShowChildrenDirective } from './directives/show-children.directive';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 
@@ -13,10 +14,12 @@ import { ShowChildrenDirective } from './directives/show-children.directive';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule,
   ],
   exports: [
-    NavbarComponent
+    NavbarComponent,
+    FormsModule,
   ]
 })
 export class SharedModule { }
