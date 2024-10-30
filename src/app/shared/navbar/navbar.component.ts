@@ -8,15 +8,16 @@ import { Link } from '../models/link';
 })
 export class NavbarComponent {
 
-  public navigationList : Link[];
+  public navigationList: Link[];
 
-  constructor(){
+  constructor () {
     this.navigationList = [
       new Link("Home", "home"),
       new Link("Démos", "demo", [
         new Link("Démo 1", "demo1"),
         new Link("Démo 2", "demo2"),
-        new Link("Démo : Les directives", "demo-directive")
+        new Link("Démo : Les directives", "demo-directive"),
+        new Link("Démo : Input/Output", "demo-input-output")
       ], false),
       new Link("Exercices", "exercice", [
         new Link("Exercice 1", "exercice1"),

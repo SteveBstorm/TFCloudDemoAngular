@@ -59,6 +59,19 @@
             <li *ngIf="numberStock > 0">{{numberStock}}</li>
         </ng-container>
     </ul>
+
+    <ul>
+
+        @for (numberStock of numberList; track $index) {
+            @if (numberStock > 0) {
+                <li>{{numberStock}}</li>
+            }
+        } @empty {
+            <li>Vous n'avez actuellement aucun stock...</li>
+        }
+
+    </ul>
+
 </ng-template>
 
 <div>

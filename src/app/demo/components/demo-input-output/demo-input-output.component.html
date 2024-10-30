@@ -1,0 +1,12 @@
+<h2>Demo : Input / Output / NgContent</h2>
+
+<app-child-output (studentNameEvent)="receiveStudentName($event)" />
+<app-child-input [studentsInChild]="studentsFromParent" />
+
+<app-child-ngcontent>
+    <p>Code fourni par le parent et affiché directement dans l'enfant.</p>
+
+    @for (student of studentsFromParent; track $index) {
+        <p>Etudiant {{ student }}</p>
+    }
+</app-child-ngcontent>

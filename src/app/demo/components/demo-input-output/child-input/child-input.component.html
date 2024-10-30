@@ -1,0 +1,10 @@
+<h3>Liste des étudiants:</h3>
+
+
+<ul>
+    @for (student of studentsInChild; track $index) {
+    <li>{{ student }}</li>
+    } @empty {
+    <li>Aucun étudiant</li>
+    }
+</ul>

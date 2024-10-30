@@ -8,6 +8,10 @@ import { Demo2Component } from './demo2/demo2.component';
 import { FahrenheitPipe } from './fahrenheit.pipe';
 import { DemoDirectiveComponent } from './components/demo-directive/demo-directive.component';
 import { HighlightDirective } from './directives/highlight.directive';
+import { DemoInputOutputComponent } from './components/demo-input-output/demo-input-output.component';
+import { ChildInputComponent } from './components/demo-input-output/child-input/child-input.component';
+import { ChildOutputComponent } from './components/demo-input-output/child-output/child-output.component';
+import { ChildNgcontentComponent } from './components/demo-input-output/child-ngcontent/child-ngcontent.component';
 
 
 @NgModule({
@@ -16,7 +20,11 @@ import { HighlightDirective } from './directives/highlight.directive';
     Demo2Component,
     FahrenheitPipe,
     DemoDirectiveComponent,
-    HighlightDirective
+    HighlightDirective,
+    DemoInputOutputComponent,
+    ChildInputComponent,
+    ChildOutputComponent,
+    ChildNgcontentComponent
   ],
   imports: [
     CommonModule,
