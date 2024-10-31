@@ -9,6 +9,7 @@ import { Exercice1Component } from './exercice1/exercice1.component';
 import { NumberToChronoPipe } from './pipes/number-to-chrono.pipe';
 import { ListViewComponent } from './components/exo-shopping-list/list-view/list-view.component';
 import { ExoShoppingServiceComponent } from './components/exo-shopping-service/exo-shopping-service.component';
+import { ExoFormsComponent } from './components/exo-forms/exo-forms.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ExoShoppingServiceComponent } from './components/exo-shopping-service/e
     NumberToChronoPipe,
     ExoShoppingListComponent,
     ListViewComponent,
-    ExoShoppingServiceComponent
+    ExoShoppingServiceComponent,
+    ExoFormsComponent
   ],
   imports: [
     CommonModule,

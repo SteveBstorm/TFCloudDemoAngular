@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ExoChronoComponent } from './components/exo-chrono/exo-chrono.component';
+import { ExoFormsComponent } from './components/exo-forms/exo-forms.component';
 import { ExoShoppingListComponent } from './components/exo-shopping-list/exo-shopping-list.component';
 import { ExoShoppingServiceComponent } from './components/exo-shopping-service/exo-shopping-service.component';
 import { Exercice1Component } from './exercice1/exercice1.component';
@@ -10,7 +11,8 @@ const routes: Routes = [
   { path: 'exercice1', component: Exercice1Component },
   { path: 'exoChrono', component: ExoChronoComponent },
   { path: 'exo-shopping', component: ExoShoppingListComponent },
-  { path: 'exo-shopping-service', component: ExoShoppingServiceComponent }
+  { path: 'exo-shopping-service', component: ExoShoppingServiceComponent },
+  { path: 'exo-forms', component: ExoFormsComponent },
 ];
 
 @NgModule({

@@ -29,6 +29,7 @@ export class NavbarComponent {
         new Link("Exercice : Le chronomètre", "exoChrono"),
         new Link("Exercice: Shopping List", "exo-shopping"),
         new Link("Exercice: Shopping Service", "exo-shopping-service"),
+        new Link("Exercice: Formulaires", "exo-forms"),
       ], false)
     ];
 
