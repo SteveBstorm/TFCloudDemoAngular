@@ -6,3 +6,14 @@
 <p>
     Vous devez créer un custom validator qui permet de vérifier si la personne est majeur ou non. Dans le cas où elle est mineure, elle ne pourra pas valider le formulaire.
 </p>
+
+<hr>
+
+<form [formGroup]="fg" (ngSubmit)="onSubmit()">
+
+    <label for="birthdate">Date de naissance:</label>
+    <input type="date" name="birthdate" id="birthdate" formControlName="birthdate">
+
+    <button [disabled]="!fg.valid">Valider</button>
+
+</form>
