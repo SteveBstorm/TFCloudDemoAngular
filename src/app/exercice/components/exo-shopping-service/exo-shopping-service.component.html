@@ -1,0 +1,38 @@
+<h2>Exercice Service: Shopping List service</h2>
+
+
+<label for="productName">Nom du produit:</label>
+<input type="text" id="productName" [(ngModel)]="productName">
+
+<label for="productQuantity">Quantité du produit:</label>
+<input type="number" id="productQuantity" [(ngModel)]="productQuantity">
+
+<button (click)="add()">Ajouter</button>
+
+
+<table>
+
+    <tr>
+        <th>Nom</th>
+        <th>Quantité</th>
+        <th>➖</th>
+        <th>➕</th>
+        <th>🗑️</th>
+    </tr>
+
+    @for (product of products; track product.name) {
+        <tr>
+            <td>{{ product.name }}</td>
+            <td>{{ product.quantity }}</td>
+            <td>
+                <button (click)="decrement(product.name)">➖</button>
+            </td>
+            <td>
+                <button (click)="increment(product.name)">➕</button>
+            </td>
+            <td>
+                <button (click)="remove(product.name)">🗑️</button>
+            </td>
+        </tr>
+    }
+</table>

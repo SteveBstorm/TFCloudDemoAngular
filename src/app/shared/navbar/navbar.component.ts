@@ -27,6 +27,7 @@ export class NavbarComponent {
         new Link("Exercice 1", "exercice1"),
         new Link("Exercice : Le chronomètre", "exoChrono"),
         new Link("Exercice: Shopping List", "exo-shopping"),
+        new Link("Exercice: Shopping Service", "exo-shopping-service"),
       ], false)
     ];
 
