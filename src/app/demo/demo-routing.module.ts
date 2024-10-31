@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DemoDirectiveComponent } from './components/demo-directive/demo-directive.component';
+import { DemoFormsComponent } from './components/demo-forms/demo-forms.component';
 import { DemoInputOutputComponent } from './components/demo-input-output/demo-input-output.component';
 import { ConnectedComponent } from './components/demo-service/connected/connected.component';
 import { DemoServiceComponent } from './components/demo-service/demo-service.component';
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'demo-input-output', component: DemoInputOutputComponent },
   { path: 'demo-service', component: DemoServiceComponent },
   { path: 'connected', component: ConnectedComponent },
+  { path: 'demo-forms', component: DemoFormsComponent },
 ];
 
 @NgModule({

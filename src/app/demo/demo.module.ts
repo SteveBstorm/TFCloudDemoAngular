@@ -14,6 +14,7 @@ import { Demo2Component } from './demo2/demo2.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { FahrenheitPipe } from './fahrenheit.pipe';
 import { ConnectedComponent } from './components/demo-service/connected/connected.component';
+import { DemoFormsComponent } from './components/demo-forms/demo-forms.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { ConnectedComponent } from './components/demo-service/connected/connecte
     ChildNgcontentComponent,
     DemoServiceComponent,
     ConnectedComponent,
+    DemoFormsComponent,
   ],
   imports: [
     CommonModule,

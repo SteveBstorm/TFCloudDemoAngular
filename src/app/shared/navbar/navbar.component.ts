@@ -22,6 +22,7 @@ export class NavbarComponent {
         new Link("Démo : Input/Output", "demo-input-output"),
         new Link("Démo : Services et DI", "demo-service"),
         new Link("Connecté", "connected"),
+        new Link("Démo : Formulaires", "demo-forms"),
       ], false),
       new Link("Exercices", "exercice", [
         new Link("Exercice 1", "exercice1"),
