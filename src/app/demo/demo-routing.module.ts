@@ -7,6 +7,11 @@ import { ConnectedComponent } from './components/demo-service/connected/connecte
 import { DemoServiceComponent } from './components/demo-service/demo-service.component';
 import { Demo1Component } from './demo1/demo1.component';
 import { Demo2Component } from './demo2/demo2.component';
+import { Demo7Component } from './demo7/demo7.component';
+import { CibleComponent } from './demo7/cible/cible.component';
+import { gandalfGuard } from './demo7/gandalf.guard';
+import { productResolver } from './demo7/productresolver.resolver';
+import { Demo8Component } from './demo8/demo8.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'demo2', pathMatch: 'full'},
@@ -17,6 +22,10 @@ const routes: Routes = [
   { path: 'demo-service', component: DemoServiceComponent },
   { path: 'connected', component: ConnectedComponent },
   { path: 'demo-forms', component: DemoFormsComponent },
+  { path: 'demo7', component: Demo7Component },
+  { path: 'cible/:id', canActivate: [gandalfGuard] , resolve : {monproduit: productResolver}, component: CibleComponent },
+  { path: 'demo8', component: Demo8Component },
+
 ];
 
 @NgModule({

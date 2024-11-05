@@ -1,6 +1,7 @@
 <h2>Demo : Services & Injection de dépendances</h2>
 
 
+
 @if (!isConnected) {
 <label for="username">Nom d'utilisateur:</label>
 <input type="text" id="username" [(ngModel)]="username">
@@ -13,3 +14,11 @@
 @else {
 <button (click)="logout()">Se déconnecter</button>
 }
+
+<hr />
+<fieldset style="border : 1px red solid">
+  <legend>Infos utiles</legend>
+  <p>Tout se trouve dans le répertoire demo/components/demo-service</p>
+  <p>L'observable est déclaré dans le authService</p>
+  <p>L'exemple d'abonnement à l'observable se trouve dans la navbar (shared/navbar/navbar.component.ts)</p>
+</fieldset>

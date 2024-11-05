@@ -1,0 +1,13 @@
+Créer une nouvelle application : Pokedex
+
+https://pokeapi.co/api/v2/pokemon
+
+Un composant liste => Bouton next et previous pour naviguer de 20 en 20
+Un composant détail =>
+	- Nom
+	- Poids
+	- Taille
+	- Sprites : Front + Back default, official artwork
+
+Affiché soit sur la même page (tips : input)
+Affiché sur une autre page (tips : router)

@@ -15,6 +15,11 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { FahrenheitPipe } from './fahrenheit.pipe';
 import { ConnectedComponent } from './components/demo-service/connected/connected.component';
 import { DemoFormsComponent } from './components/demo-forms/demo-forms.component';
+import { Demo7Component } from './demo7/demo7.component';
+import { CibleComponent } from './demo7/cible/cible.component';
+import { ErrorComponent } from './demo7/error/error.component';
+import { Demo8Component } from './demo8/demo8.component';
+
 
 
 @NgModule({
@@ -31,6 +36,10 @@ import { DemoFormsComponent } from './components/demo-forms/demo-forms.component
     DemoServiceComponent,
     ConnectedComponent,
     DemoFormsComponent,
+    Demo7Component,
+    CibleComponent,
+    ErrorComponent,
+    Demo8Component
   ],
   imports: [
     CommonModule,

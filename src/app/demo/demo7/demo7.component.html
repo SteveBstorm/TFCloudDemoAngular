@@ -1,0 +1,8 @@
+<h3>Démo Routing</h3>
+<button (click)="navigate(42)">Vers la cible</button>
+
+<ul>
+  <li *ngFor="let p of liste; let i = index">
+    {{p.name}} <button (click)="navigate(i)">Details</button>
+  </li>
+</ul>

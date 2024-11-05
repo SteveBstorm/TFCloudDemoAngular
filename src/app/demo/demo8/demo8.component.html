@@ -1,0 +1,18 @@
+<h3>Consommation API (HTTP Client)</h3>
+<button (click)="loadData()">Get Datas</button> <br />
+<button (click)="register()">Add User</button>
+
+<div>
+  <ul>
+    <li *ngFor="let u of info">
+      {{u.nickname}} : {{u.isAdmin ? 'admin' : 'user'}}
+    </li>
+  </ul>
+</div>
+
+<fieldset style="border : 1px red solid">
+  <legend>Infos utiles</legend>
+  <ol>
+    <li>Ajouter "provideHttpClient()" aux providers de app.module.ts</li>
+  </ol>
+</fieldset>
